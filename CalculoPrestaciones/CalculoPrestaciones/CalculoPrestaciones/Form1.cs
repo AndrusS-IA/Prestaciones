@@ -36,6 +36,7 @@ namespace CalculoPrestaciones
         public double TotalPagar;
         public int tiempo13;
         public int tiempo14;
+        public int tiempo15;
         public double aguinaldo;
         public double catorceavo;
 
@@ -100,7 +101,8 @@ namespace CalculoPrestaciones
             TimeSpan tspan = fechaFinal - fechaInicio;
             tiempo = tspan.Days;
 
-            if (comboBox1.Text == "Empleador")
+            // Modo Despido
+            if (comboBox1.Text == "Despido")
             {
             //Calculo de Cesantia
             if (tiempo >= 90 && tiempo <= 180)
@@ -186,15 +188,30 @@ namespace CalculoPrestaciones
             textBoxAguinaldo.Text = tiempo13.ToString();
             textBoxPaguinaldo.Text = aguinaldo.ToString("0,0.00");
 
+                //Catorceavo
             DateTime fechaInicio3 = new DateTime(2019,7,1);
             DateTime fechaFinal3 = dateTimePicker2.Value.Date;
             TimeSpan tspan3 = fechaFinal3 - fechaInicio3;
             tiempo14 = tspan3.Days;
 
-            catorceavo = tiempo14 * (SueldoMensual / 360);
-            textBoxCatorceavo.Text = tiempo14.ToString();
-            textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+            if (fechaInicio3 < fechaFinal3)
+                {
+                    catorceavo = tiempo14 * (SueldoMensual / 360);
+                    textBoxCatorceavo.Text = tiempo14.ToString();
+                    textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+                }
+                else
+                {
+                    DateTime fechaInicio4 = new DateTime(2019, 1, 1);
+                    DateTime fechaFinal4 = dateTimePicker2.Value.Date;
+                    TimeSpan tspan4 = fechaFinal4 - fechaInicio4;
+                    tiempo15 = 180+(tspan4.Days);
 
+                    catorceavo = tiempo15 * (SueldoMensual / 360);
+                    textBoxCatorceavo.Text = tiempo15.ToString();
+                    textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+
+                }
 
 
             //Total a Pagar
@@ -202,7 +219,7 @@ namespace CalculoPrestaciones
             textBoxTotalPagar.Text = TotalPagar.ToString("0,0.00");
             }
 
-            else //Modo Trabajador
+            else //Modo Renuncia
             {
                 //Calculo de Preaviso
                 if (tiempo <= 89)
@@ -267,11 +284,24 @@ namespace CalculoPrestaciones
                 DateTime fechaFinal3 = dateTimePicker2.Value.Date;
                 TimeSpan tspan3 = fechaFinal3 - fechaInicio3;
                 tiempo14 = tspan3.Days;
+                if (fechaInicio3 < fechaFinal3)
+                {
+                    catorceavo = tiempo14 * (SueldoMensual / 360);
+                    textBoxCatorceavo.Text = tiempo14.ToString();
+                    textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+                }
+                else
+                {
+                    DateTime fechaInicio4 = new DateTime(2019, 1, 1);
+                    DateTime fechaFinal4 = dateTimePicker2.Value.Date;
+                    TimeSpan tspan4 = fechaFinal4 - fechaInicio4;
+                    tiempo15 = 180 + (tspan4.Days);
 
-                catorceavo = tiempo14 * (SueldoMensual / 360);
-                textBoxCatorceavo.Text = tiempo14.ToString();
-                textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+                    catorceavo = tiempo15 * (SueldoMensual / 360);
+                    textBoxCatorceavo.Text = tiempo15.ToString();
+                    textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
 
+                }
 
 
                 //Total a Pagar

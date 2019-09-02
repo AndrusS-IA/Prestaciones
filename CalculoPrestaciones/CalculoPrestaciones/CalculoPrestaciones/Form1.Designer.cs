@@ -157,11 +157,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 33);
+            this.label5.Location = new System.Drawing.Point(13, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Solicitado por:";
+            this.label5.Text = "Tipo de Calculo:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboBox1
@@ -169,13 +169,13 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Trabajador",
-            "Empleador"});
-            this.comboBox1.Location = new System.Drawing.Point(93, 33);
+            "Renuncia",
+            "Despido"});
+            this.comboBox1.Location = new System.Drawing.Point(97, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
-            this.comboBox1.Text = "Solicitante";
+            this.comboBox1.Text = "Elija Tipo de Calculo";
             // 
             // label6
             // 

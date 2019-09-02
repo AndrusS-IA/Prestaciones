@@ -10,3 +10,9 @@ C:\Users\CDI PRINCIPAL\Documents\Proyectos L3\CalculoPrestaciones\CalculoPrestac
 C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\bin\Debug\CalculoPrestaciones.exe.config
 C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.exe
 C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.pdb
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\bin\Debug\CalculoPrestaciones.exe
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\bin\Debug\CalculoPrestaciones.pdb
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.csprojResolveAssemblyReference.cache
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.Form1.resources
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.Properties.Resources.resources
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.csproj.GenerateResource.Cache
