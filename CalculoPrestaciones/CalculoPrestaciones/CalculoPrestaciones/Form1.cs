@@ -37,6 +37,7 @@ namespace CalculoPrestaciones
         public int tiempo13;
         public int tiempo14;
         public int tiempo15;
+        public int tiempoBase;
         public double aguinaldo;
         public double catorceavo;
 
@@ -177,8 +178,16 @@ namespace CalculoPrestaciones
 
             valorV = dvacaciones * SueldoDiarioReal;
             textBoxValorV.Text = valorV.ToString("0,0.00");
+            
 
-            //Calculo de Aguinaldo y Catorceavo
+            DateTime fechaInicioBase = dateTimePicker1.Value.Date;
+            DateTime fechaFinalBase = dateTimePicker2.Value.Date;
+            TimeSpan tspanBase = fechaFinalBase - fechaInicioBase;
+            tiempoBase = tspanBase.Days;
+
+            if (tiempoBase > 360)
+                { 
+            //Calculo de Aguinaldo
             DateTime fechaInicio2 = new DateTime(2019,1,1);
             DateTime fechaFinal2 = dateTimePicker2.Value.Date;
             TimeSpan tspan2 = fechaFinal2 - fechaInicio2;
@@ -212,10 +221,23 @@ namespace CalculoPrestaciones
                     textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
 
                 }
+                }
+                else
+                {
+                    tiempo13 = 0;
+                    aguinaldo = 0;
+                    textBoxAguinaldo.Text = tiempo13.ToString();
+                    textBoxPaguinaldo.Text = aguinaldo.ToString("0,0.00");
+
+                    tiempo14 = 0;
+                    catorceavo = 0;
+                    textBoxCatorceavo.Text = tiempo14.ToString();
+                    textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+                }
 
 
-            //Total a Pagar
-            TotalPagar = valorV + subtotal + aguinaldo + catorceavo;
+                //Total a Pagar
+                TotalPagar = valorV + subtotal + aguinaldo + catorceavo;
             textBoxTotalPagar.Text = TotalPagar.ToString("0,0.00");
             }
 
@@ -270,37 +292,59 @@ namespace CalculoPrestaciones
                 valorV = dvacaciones * SueldoDiarioReal;
                 textBoxValorV.Text = valorV.ToString("0,0.00");
 
-                //Calculo de Aguinaldo y Catorceavo
-                DateTime fechaInicio2 = new DateTime(2019, 1, 1);
-                DateTime fechaFinal2 = dateTimePicker2.Value.Date;
-                TimeSpan tspan2 = fechaFinal2 - fechaInicio2;
-                tiempo13 = tspan2.Days;
+                DateTime fechaInicioBase = dateTimePicker1.Value.Date;
+                DateTime fechaFinalBase = dateTimePicker2.Value.Date;
+                TimeSpan tspanBase = fechaFinalBase - fechaInicioBase;
+                tiempoBase = tspanBase.Days;
 
-                aguinaldo = tiempo13 * (SueldoMensual / 360);
-                textBoxAguinaldo.Text = tiempo13.ToString();
-                textBoxPaguinaldo.Text = aguinaldo.ToString("0,0.00");
-
-                DateTime fechaInicio3 = new DateTime(2019, 7, 1);
-                DateTime fechaFinal3 = dateTimePicker2.Value.Date;
-                TimeSpan tspan3 = fechaFinal3 - fechaInicio3;
-                tiempo14 = tspan3.Days;
-                if (fechaInicio3 < fechaFinal3)
+                if (tiempoBase > 360)
                 {
-                    catorceavo = tiempo14 * (SueldoMensual / 360);
-                    textBoxCatorceavo.Text = tiempo14.ToString();
-                    textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+                    //Calculo de Aguinaldo
+                    DateTime fechaInicio2 = new DateTime(2019, 1, 1);
+                    DateTime fechaFinal2 = dateTimePicker2.Value.Date;
+                    TimeSpan tspan2 = fechaFinal2 - fechaInicio2;
+                    tiempo13 = tspan2.Days;
+
+                    aguinaldo = tiempo13 * (SueldoMensual / 360);
+                    textBoxAguinaldo.Text = tiempo13.ToString();
+                    textBoxPaguinaldo.Text = aguinaldo.ToString("0,0.00");
+
+                    //Catorceavo
+                    DateTime fechaInicio3 = new DateTime(2019, 7, 1);
+                    DateTime fechaFinal3 = dateTimePicker2.Value.Date;
+                    TimeSpan tspan3 = fechaFinal3 - fechaInicio3;
+                    tiempo14 = tspan3.Days;
+
+                    if (fechaInicio3 < fechaFinal3)
+                    {
+                        catorceavo = tiempo14 * (SueldoMensual / 360);
+                        textBoxCatorceavo.Text = tiempo14.ToString();
+                        textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+                    }
+                    else
+                    {
+                        DateTime fechaInicio4 = new DateTime(2019, 1, 1);
+                        DateTime fechaFinal4 = dateTimePicker2.Value.Date;
+                        TimeSpan tspan4 = fechaFinal4 - fechaInicio4;
+                        tiempo15 = 180 + (tspan4.Days);
+
+                        catorceavo = tiempo15 * (SueldoMensual / 360);
+                        textBoxCatorceavo.Text = tiempo15.ToString();
+                        textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
+
+                    }
                 }
                 else
                 {
-                    DateTime fechaInicio4 = new DateTime(2019, 1, 1);
-                    DateTime fechaFinal4 = dateTimePicker2.Value.Date;
-                    TimeSpan tspan4 = fechaFinal4 - fechaInicio4;
-                    tiempo15 = 180 + (tspan4.Days);
+                    tiempo13 = 0;
+                    aguinaldo = 0;
+                    textBoxAguinaldo.Text = tiempo13.ToString();
+                    textBoxPaguinaldo.Text = aguinaldo.ToString("0,0.00");
 
-                    catorceavo = tiempo15 * (SueldoMensual / 360);
-                    textBoxCatorceavo.Text = tiempo15.ToString();
+                    tiempo14 = 0;
+                    catorceavo = 0;
+                    textBoxCatorceavo.Text = tiempo14.ToString();
                     textBoxPCatorceavo.Text = catorceavo.ToString("0,0.00");
-
                 }
 
 

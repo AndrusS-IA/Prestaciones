@@ -16,3 +16,7 @@ C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPres
 C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.Form1.resources
 C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.Properties.Resources.resources
 C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.csproj.GenerateResource.Cache
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\bin\Debug\CalculoPrestaciones.exe.manifest
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\bin\Debug\CalculoPrestaciones.application
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.exe.manifest
+C:\Users\CDI PRINCIPAL\Source\Repos\Prestaciones\CalculoPrestaciones\CalculoPrestaciones\CalculoPrestaciones\obj\Debug\CalculoPrestaciones.application
